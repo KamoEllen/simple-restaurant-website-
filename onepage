@@ -1,0 +1,50 @@
+import React from 'react';
+import './styles.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header>
+        <h1>Delicious Restaurant</h1>
+        <nav>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="menu">
+          <h2>Menu</h2>
+          <ul>
+            <li>
+              <h3>Appetizers</h3>
+              <ul>
+                <li>Mozzarella sticks</li>
+                <li>Fried calamari</li>
+                <li>Bruschetta</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Entrees</h3>
+              <ul>
+                <li>Chicken parmesan</li>
+                <li>Spaghetti and meatballs</li>
+                <li>Lasagna</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Desserts</h3>
+              <ul>
+                <li>Tiramisu</li>
+                <li>Cannoli</li>
+                <li>Chocolate mousse</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque risus sed justo bibendum, eu malesuada leo tempor. Nam fermentum mi ac nibh porttitor, eu tincidunt sem bibendum. Nulla mollisasin quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Pellentesque pulvinar nulla ut enim volutpat commodo. Nunc sed pretium lectus. Fusce egestas mollis nisl, a lobortis dui rutrum non. Pellentesque eu nibh a ipsum mollis feugiat. Mauris efficitur augue et libero facilisis dictum. Nam eleifend quis elit ac fermentum. Morbi dapibus enim non tortor ornare, a sollicitudin metus ultricies. Fusce condimentum, quam in luctus convallis, arcu turpis consectetur ante, eu facilisis mi turpis at leo. Nunc placerat ultricies neque
