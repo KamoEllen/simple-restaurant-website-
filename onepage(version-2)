@@ -1,0 +1,73 @@
+import React from 'react';
+import './styles.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header>
+        <h1>Delicious Restaurant</h1>
+        <nav>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="menu">
+          <h2>Menu</h2>
+          <ul>
+            <li>
+              <h3>Appetizers</h3>
+              <ul>
+                <li>Mozzarella sticks</li>
+                <li>Fried calamari</li>
+                <li>Bruschetta</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Entrees</h3>
+              <ul>
+                <li>Chicken parmesan</li>
+                <li>Spaghetti and meatballs</li>
+                <li>Lasagna</li>
+              </ul>
+            </li>
+            <li>
+              <h3>Desserts</h3>
+              <ul>
+                <li>Tiramisu</li>
+                <li>Cannoli</li>
+                <li>Chocolate mousse</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque risus sed justo bibendum, eu malesuada leo tempor. Nam fermentum mi ac nibh porttitor, eu tincidunt sem bibendum. Nulla mollisasin quam.</p>
+        </section>
+        <section id="location">
+          <h2>Location</h2>
+          <p>123 Main Street, Anytown USA</p>
+          <div id="map"></div>
+        </section>
+        <section id="reviews">
+          <h2>Reviews</h2>
+          <form>
+            <label>Name: <input type="text" name="name" /></label>
+            <label>Date: <input type="date" name="date" /></label>
+            <label>Review: <textarea name="review"></textarea></label>
+            <input type="submit" value="Submit Review" />
+          </form>
+          <div id="reviews-list">
+            <h3>John Doe</h3>
+            <p>I had the chicken parmesan and it was delicious!</p>
+          </div>
+        </section>
+        <section id="contact">
+          <h2>Contact</h2>
+          <p>Phone:
