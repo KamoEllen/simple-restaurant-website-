@@ -1,0 +1,98 @@
+import React, { useState } from 'react';
+import Map from './Map';
+import Review from './Review';
+import './styles.css';
+
+const menu = [
+  {
+    category: 'Appetizers',
+    items: ['Mozzarella sticks', 'Fried calamari', 'Bruschetta']
+  },
+  {
+    category: 'Entrees',
+    items: ['Chicken parmesan', 'Spaghetti and meatballs', 'Lasagna']
+  },
+  {
+    category: 'Desserts',
+    items: ['Tiramisu', 'Cannoli', 'Chocolate mousse']
+  }
+];
+
+const reviews = [
+  {
+    name: 'John Doe',
+    date: '10/10/2022',
+    review: 'I had the chicken parmesan and it was delicious!'
+  },
+  {
+    name: 'Jane Smith',
+    date: '11/15/2022',
+    review: 'The tiramisu was the best I've ever had! Highly recommend.'
+  }
+];
+
+function App() {
+  const [formData, setFormData] = useState({
+    name: '',
+    date: '',
+    review: ''
+  });
+
+  const handleChange = event => {
+    const { name, value } = event.target;
+    setFormData(prevData => ({
+      ...prevData,
+      [name]: value
+    }));
+  }
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setFormData({
+      name: '',
+      date: '',
+      review: ''
+    });
+    reviews.push(formData);
+  }
+
+  return (
+    <div className="App">
+      <header>
+        <h1>Delicious Restaurant</h1>
+        <nav>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="menu">
+          <h2>Menu</h2>
+          <ul>
+            {menu.map(category => (
+              <li>
+                <h3>{category.name}</h3>
+                <ul>
+                  {category.items.map(item => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </section>
+        <section id="location">
+          <h2>Location</h2>
+          <Map />
+        </section>
+        <section id="reviews">
+          <h2>Reviews</h2>
