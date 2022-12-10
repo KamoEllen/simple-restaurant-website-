@@ -1,5 +1,8 @@
 import React from 'react';
 import './styles.css';
+import Map from './Map';
+import Review from './Review';
+import './styles.css';
 
 function App() {
   return (
