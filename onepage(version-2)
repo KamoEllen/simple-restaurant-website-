@@ -71,3 +71,68 @@ function App() {
         <section id="contact">
           <h2>Contact</h2>
           <p>Phone: -27 555 5555 55</p>
+          </section>
+
+const menu = [
+  {
+    category: 'Appetizers',
+    items: ['Mozzarella sticks', 'Fried calamari', 'Bruschetta']
+  },
+  {
+    category: 'Entrees',
+    items: ['Chicken parmesan', 'Spaghetti and meatballs', 'Lasagna']
+  },
+  {
+    category: 'Desserts',
+    items: ['Tiramisu', 'Cannoli', 'Chocolate mousse']
+  }
+];
+
+const reviews = [
+  {
+    name: 'John Doe',
+    date: '10/10/2022',
+    review: 'I had the chicken parmesan and it was delicious!'
+  },
+  {
+    name: 'Jane Smith',
+    date: '11/15/2022',
+    review: 'The tiramisu was the best I've ever had! Highly recommend.'
+  }
+];
+
+function App() {
+  return (
+    <div className="App">
+      <header>
+        <h1>Delicious Restaurant</h1>
+        <nav>
+          <ul>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="menu">
+          <h2>Menu</h2>
+          <ul>
+            {menu.map(category => (
+              <li>
+                <h3>{category.name}</h3>
+                <ul>
+                  {category.items.map(item => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section id="about">
+          <h2>About</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec scelerisque risus sed justo bibendum, eu malesuada leo tempor. Nam fermentum mi ac nibh porttitor, eu tincidunt sem bibendum. Nulla mollisasin quam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse potenti. Pellentesque pulvinar nulla ut enim volutpat commodo. Nunc sed pretium lectus. Fusce egestas mollis nisl, a lobortis dui rutrum non. Pellentesque eu nibh a ipsum mollis feugiat. Mauris efficitur augue et libero facilisis dictum. Nam eleifend quis elit ac fermentum. Morbi dapibus enim non tortor orn
+
